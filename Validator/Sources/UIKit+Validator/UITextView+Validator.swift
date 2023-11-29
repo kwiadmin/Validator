@@ -3,9 +3,9 @@ import UIKit
 #if os(iOS)
 extension UITextView: ValidatableInterfaceElement {
         
-    open var inputValue: String? { return text }
+    public var inputValue: String? { return text }
     
-    open func validateOnInputChange(enabled: Bool) {
+    public func validateOnInputChange(enabled: Bool) {
         
         switch enabled {        
         case true: NotificationCenter.default.addObserver(self, selector: #selector(performValidation), name: UITextView.textDidChangeNotification, object: self)

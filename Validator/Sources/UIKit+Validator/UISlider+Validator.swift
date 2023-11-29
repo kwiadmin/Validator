@@ -3,9 +3,9 @@ import UIKit
 #if os(iOS)
 extension UISlider: ValidatableInterfaceElement {
         
-    open var inputValue: Float? { return value }
+    public var inputValue: Float? { return value }
     
-    open func validateOnInputChange(enabled: Bool) {
+    public func validateOnInputChange(enabled: Bool) {
         
         switch enabled {
         

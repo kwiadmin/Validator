@@ -3,9 +3,9 @@ import UIKit
 #if os(iOS)
 extension UITextField: ValidatableInterfaceElement {
         
-    open var inputValue: String? { return text }
+    public var inputValue: String? { return text }
     
-    open func validateOnInputChange(enabled: Bool) {
+    public func validateOnInputChange(enabled: Bool) {
         
         switch enabled {
         case true: addTarget(self, action: #selector(performValidation), for: .editingChanged)
@@ -13,7 +13,7 @@ extension UITextField: ValidatableInterfaceElement {
         }
     }
     
-    open func validateOnEditingEnd(enabled: Bool) {
+    public func validateOnEditingEnd(enabled: Bool) {
         
         switch enabled {
         case true: addTarget(self, action: #selector(performValidation), for: .editingDidEnd)
